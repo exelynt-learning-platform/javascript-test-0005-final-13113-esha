@@ -1,16 +1,16 @@
+let n = 4;
+let size = 2 * n - 1;
 
-let num = 1;
+for (let i = 0; i < size; i++) {
 
-for (let i = 1; i <= 5; i++) {
     let row = "";
 
-    for (let j = 1; j <= i; j++) {
-        row += num;
-        if (i === 5 && j < i) {
-            row += " ";
-        }
-        num++;
+    for (let j = 0; j < size; j++) {
+
+        let min = Math.min(i, j, size - i - 1, size - j - 1);
+        row += (n - min) + " ";
+
     }
 
-    console.log(row);
+    console.log(row.trim());
 }
