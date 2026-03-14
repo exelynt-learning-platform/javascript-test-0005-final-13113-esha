@@ -1,18 +1,13 @@
-let rows = 10;
+let n = 5;
+let num = 1;
 
-for (let i = 1; i <= rows; i++) {
+for (let i = 1; i <= n; i++) {
+    let row = "";
 
-    if (i == 1 || i == rows) {
-        console.log("*");
-    }
-    else if (i == 2 || i == rows - 1) {
-        console.log("* *".replace(" ", "")); // prints **
-    }
-    else if (i == 3 || i == rows - 2) {
-        console.log("* *");
-    }
-    else {
-        console.log("*   *");
+    for (let j = 1; j <= i; j++) {
+        row += num + " ";
+        num++;
     }
 
+    console.log(row.trim());
 }
